@@ -20,7 +20,6 @@ def all_done(word, guesses):
 	for i in range(len(word)):
 		if contains_letter(guesses, word[i]):
 			count += 1
-	
 	# Ignores whitespace
 	word = word.replace(' ', '')
 	if count == len(word):
