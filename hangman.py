@@ -12,9 +12,13 @@ def main():
 	guess_limit = 10
 	letters = ''
 	guessed_letters = []
+	alphabet = 'A B C D E F G H I J K L M\nN O P Q R S T U V W X Y Z'
 
 	print('The word is:')
 	print(w.show_letters(word, letters))
+	print()
+	print(alphabet)
+	print()
 
 	while not w.all_done(word, letters) and guess_limit > 0:
 		print('Guess a letter:')
@@ -32,7 +36,10 @@ def main():
 			guessed_letters.append(guess)
 
 		letters += guess
+		alphabet = alphabet.replace(guess, '#')
 		print(w.show_letters(word, letters))
+		print()
+		print(alphabet)
 		print()
 
 	if guess_limit > 0:
