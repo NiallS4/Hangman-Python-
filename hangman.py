@@ -1,9 +1,3 @@
-'''
-Hangman game (Python)
-22 February 2019
-Niall Stapleton
-'''
-
 import sys
 import word as w
 
